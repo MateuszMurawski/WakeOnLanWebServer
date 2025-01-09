@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wake On Lan Web Server</title>
+    <link rel="shortcut icon" href="data:image/x-icon;base64,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" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-height: 90vh;
+        }
+
+        .title {
+            color: #fffff;
+            font-size: 1rem;
+        }
+
+        .table-container {
+            width: 98%;
+            overflow-y: auto;
+            max-height: 80%;
+            background-color: #fff;
+            border-bottom: 1px solid #000;
+            border-right: 1px solid #000;
+            border-top: 1px solid #000;
+            max-width: 1300px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.8rem;
+        }
+
+        th, td {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            min-width: 80px;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        td {
+            border-top: 1px solid #000;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            min-width: 70px;
+            width: 80%;
+            max-width: 250px;
+            font-size: 0.8rem;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #dcf0dc;
+        }
+
+        button:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        @media (min-width: 992px) {
+            table {
+                font-size: 1rem;
+            }
+
+            button {
+                font-size: 1rem;
+                min-width: 150px;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+
+            th, td {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+
+            th {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+
+            .main {
+                max-height: 98vh;
+            }
+
+            .table-container {
+                max-height: 100%;
+            }
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <h1>Computers list</h1>
+        </div>
+
+        <div class="table-container">
+            <table id="computers-table">
+                <thead>
+                    <tr>
+                        <th>Computer name</th>
+                        <th>User name</th>
+                        <th>Is on</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Function to fetch updated computer data
+            const updateData = () => {
+                $.ajax({
+                    url: '/update_data',
+                    type: 'GET',
+                    success: updateTable,
+                    error: (xhr, status, error) => console.error('Error:', error)
+                });
+            };
+
+            // Function to translate the status code into a readable text
+            const translateStatus = status => {
+                const statusMap = {
+                    0: "NO",
+                    1: "YES",
+                    2: "TURNING ON...",
+                    3: "CHECKING..."
+                };
+                return statusMap[status] || "UNKNOWN STATUS";
+            };
+
+            // Function to update the computer table in the UI
+            const updateTable = computers => {
+                const tableBody = $('#computers-table tbody').empty();
+                computers.forEach(computer => {
+                    const isStarting = [1, 2, 3].includes(computer[2]);
+                    const button = `<button onclick="runAction('${computer[0]}')" ${isStarting ? 'disabled' : ''}>Turn on</button>`;
+                    const row = `<tr>
+                        <td>${computer[0]}</td>
+                        <td>${computer[1]}</td>
+                        <td>${translateStatus(computer[2])}</td>
+                        <td>${button}</td>
+                    </tr>`;
+                    tableBody.append(row);
+                });
+            };
+
+            // Function to run the WOL action for a computer when the button is clicked
+            window.runAction = ID => {
+                $.ajax({
+                    url: '/run_action',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ ID }),
+                    success: function(response) {
+                        if (response.status === "success") {
+                            updateData();  // Only refresh the data if successful
+                        } else {
+                            console.error("Failed to send WOL signal.");
+                        }
+                    },
+                    error: (xhr, status, error) => console.error('Error:', error)
+                });
+            };
+
+            setInterval(updateData, 5000);
+            updateData();
+        });
+    </script>
+</body>
+</html>

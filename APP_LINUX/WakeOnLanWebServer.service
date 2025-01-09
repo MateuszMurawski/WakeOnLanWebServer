@@ -1,0 +1,14 @@
+[Unit]
+Description=Runs the Wake On Lan Web Server as a service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/sudo /opt/WakeOnLanWebServer/WakeOnLanWebServer
+WorkingDirectory=/opt/WakeOnLanWebServer/
+
+Restart=always
+RestartSec=120
+User=root
+
+[Install]
+WantedBy=multi-user.target
